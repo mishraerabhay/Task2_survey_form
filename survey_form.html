@@ -1,53 +1,106 @@
-<div class="form-control">
-    <label>
-        Would you recommend ABES to a friend?
-    </label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <!-- Input Type Radio Button -->
-    <label for="recommed-1">
-        <input type="radio" id="recommed-1" name="recommed" value="Yes"> Yes
-    </label>
-    <label for="recommed-2">
-        <input type="radio" id="recommed-2" name="recommed" value="No"> No
-    </label>
-    <label for="recommed-3">
-        <input type="radio" id="recommed-3" name="recommed" value="Maybe"> Maybe
-    </label>
-</div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-<div class="form-control">
-    <label>Languages and Frameworks known
-        <small>(Check all that apply)</small>
-    </label>
-    <!-- Input Type Checkbox -->
-    <label for="inp-1">
-        <input type="checkbox" id="inp-1" name="inp" value="C"> C
-    </label>
-    <label for="inp-2">
-        <input type="checkbox" id="inp-2" name="inp" value="C++"> C++
-    </label>
-    <label for="inp-3">
-        <input type="checkbox" id="inp-3" name="inp" value="C#"> C#
-    </label>
-    <label for="inp-4">
-        <input type="checkbox" id="inp-4" name="inp" value="Java"> Java
-    </label>
-    <label for="inp-5">
-        <input type="checkbox" id="inp-5" name="inp" value="Python"> Python
-    </label>
-    <label for="inp-6">
-        <input type="checkbox" id="inp-6" name="inp" value="JavaScript"> JavaScript
-    </label>
-    <label for="inp-7">
-        <input type="checkbox" id="inp-7" name="inp" value="React"> React
-    </label>
-    <label for="inp-8">
-        <input type="checkbox" id="inp-8" name="inp" value="Angular"> Angular
-    </label>
-    <label for="inp-9">
-        <input type="checkbox" id="inp-9" name="inp" value="Django"> Django
-    </label>
-    <label for="inp-10">
-        <input type="checkbox" id="inp-10" name="inp" value="Spring"> Spring
-    </label>
-</div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="role">Which option best describes your current role?</label>
+            <select id="role" name="role">
+                <option value="">Select an option</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Would you recommend our service to a friend?</label>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+
+            <label>Languages and frameworks you know (check all that apply):</label>
+            <label><input type="checkbox" name="language" value="C"> C</label>
+            <label><input type="checkbox" name="language" value="C++"> C++</label>
+            <label><input type="checkbox" name="language" value="C#"> C#</label>
+            <label><input type="checkbox" name="language" value="Java"> Java</label>
+            <label><input type="checkbox" name="language" value="Python"> Python</label>
+            <label><input type="checkbox" name="language" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="language" value="React"> React</label>
+            <label><input type="checkbox" name="language" value="Angular"> Angular</label>
+            <label><input type="checkbox" name="language" value="Django"> Django</label>
+            <label><input type="checkbox" name="language" value="Spring"> Spring</label>
+
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter your comment here..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
