@@ -1,17 +1,41 @@
-name: Deploy to GitHub Pages
+name: CI and CD for HTML/CSS/JS
 
 on:
   push:
-    branches:
-      - main  # Run whenever main branch gets new code
+    branches: [ "main" ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
+    steps:
+      # 1. Get code
+      - uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      # 3. Install linters
+      - name: Install linters
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard eslint
+
+      # 4. Run HTML checks
+      - name: Run HTMLHint
+        run: htmlhint "**/*.html"
+
+      # 5. Run CSS checks
+      - name: Run Stylelint
+        run: stylelint "**/*.css"
+
+      # 6. Run JS checks
+      - name: Run ESLint
+        run: eslint "**/*.js" || true # use '|| true' if you want warnings not to stop deploy
+
+      # 7. Deploy to GitHub Pages (only if checks passed)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
