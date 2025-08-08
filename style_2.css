@@ -1,7 +1,4 @@
 
-/* Styling the Body element i.e. Color,
-		Font, Alignment */
-        *
         {
             margin: 0;
             padding: 0;
@@ -14,7 +11,7 @@
 			text-align: center;
 		}
 
-		/* Styling the Form (Color, Padding, Shadow) */
+	
 		form {
 			background-color: #fff;
 			max-width: 500px;
@@ -23,20 +20,19 @@
 			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 		}
 
-		/* Styling form-control Class */
+	
 		.form-control {
 			text-align: left;
 			margin-bottom: 25px;
 		}
 
-		/* Styling form-control Label */
+		
 		.form-control label {
 			display: block;
 			margin-bottom: 10px;
 		}
 
-		/* Styling form-control input,
-		select, textarea */
+	
 		.form-control input,
 		.form-control select,
 		.form-control textarea {
@@ -48,15 +44,14 @@
 			width: 95%;
 		}
 
-		/* Styling form-control Radio
-		button and Checkbox */
+	
 		.form-control input[type="radio"],
 		.form-control input[type="checkbox"] {
 			display: inline-block;
 			width: auto;
 		}
 
-		/* Styling Button */
+	
 		button {
 			background-color: #058ec4;
 			border: 1px solid #777;
@@ -67,4 +62,5 @@
 			width: 100%;
 			margin-top: 50px;
 			margin-bottom: 20px;
+
 		}
